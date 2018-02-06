@@ -1,0 +1,30 @@
+# Change YOUR_TOKEN to your prerender token and uncomment that line if you want to cache urls and view crawl stats
+# Change http://example.com (at the end of the last RewriteRule) to your website url
+
+<IfModule mod_headers.c>
+   #RequestHeader set X-Prerender-Token "GAQ1LeEYSfK6Z2CjRcgW"
+    #RequestHeader set X-Prerender-Token "YOUR_TOKEN"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP_USER_AGENT} baiduspider|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator|facebookexternalhit [NC,OR]
+    RewriteCond %{QUERY_STRING} _escaped_fragment_
+
+    # Only proxy the request to Prerender if it's a request for HTML
+    RewriteRule ^(.*) http://www.unipaper.co.uk:3000/http://unipaper.co.uk/$1 [P,L]
+
+    # RewriteCond %{HTTP_USER_AGENT} facebookexternalhit [NC,OR]
+    # RewriteCond %{QUERY_STRING} _escaped_fragment_
+
+    # Only proxy the request to Prerender if it's a request for HTML
+    # RewriteRule ^(.*) http://localhost:8080/meta/$1 [P,L]
+
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule ^(.*) index.html [NC,L]
+</IfModule>
