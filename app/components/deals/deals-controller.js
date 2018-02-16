@@ -103,7 +103,8 @@ unipaper.controller('dealsController', function($scope, contentful, environmentV
           id: aDeal.sys.id,
           headline: aDeal.fields !== undefined && aDeal.fields.title !== undefined ? aDeal.fields.title : '',
           date: 'Available until ' + (aDeal.fields !== undefined && aDeal.fields.dealEndTime !== undefined ? utilityFactory.getMonthFromTimestamp(aDeal.fields.dealEndTime) : utilityFactory.getMonthName(((new Date()).getMonth()))),
-          image: utilityFactory.getImageUrlForAStory(aDeal)
+          image: utilityFactory.getImageUrlForAStory(aDeal),
+          slug: aDeal.fields !== undefined && aDeal.fields.urlSlug !== undefined && aDeal.fields.urlSlug !== '' ? aDeal.fields.urlSlug : aDeal.sys.id
         };
         appendToTagsAndRelatedStoriesLookup(aDeal);
       }

@@ -10,13 +10,13 @@
   <!-- Center pane begins -->
   <section class="center-pane">
   	<section class="container deals-content">
-  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule1.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule1.id && showDealsContent">
+  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule1.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule1.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule1.headline }}</p>
               <small>{{ dealsContent.horizontalModule1.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule1.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule1.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule1.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule1.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -24,13 +24,13 @@
           </div>
         </div>
   		</div>
-  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule2.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule2.id && showDealsContent">
+  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule2.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule2.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule2.headline }}</p>
               <small>{{ dealsContent.horizontalModule2.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule2.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule2.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule2.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule2.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -38,13 +38,13 @@
           </div>
         </div>
       </div>
-  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule3.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule3.id && showDealsContent">
+  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule3.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule3.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule3.headline }}</p>
               <small>{{ dealsContent.horizontalModule3.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule3.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule3.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule3.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule3.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -52,13 +52,13 @@
           </div>
         </div>
       </div>
-  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule4.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule4.id && showDealsContent">
+  		<div class="horz-block-item image-module {{ dealsContent.horizontalModule4.image === '' ? 'module-without-image' : '' }}" ng-if="dealsContent.horizontalModule4.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule4.headline }}</p>
               <small>{{ dealsContent.horizontalModule4.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule4.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule4.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule4.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule4.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -66,13 +66,13 @@
           </div>
         </div>
       </div>
-  		<div class="horz-block-item image-module" ui-sref="deal({id: '{{ dealsContent.horizontalModule5.id }}'})" ng-if="dealsContent.horizontalModule5.id && showDealsContent">
+  		<div class="horz-block-item image-module" ui-sref="deal({slug: '{{ dealsContent.horizontalModule5.slug }}'})" ng-if="dealsContent.horizontalModule5.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule5.headline }}</p>
               <small>{{ dealsContent.horizontalModule5.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule5.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule5.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule5.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule5.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -80,13 +80,13 @@
           </div>
         </div>
   		</div>
-      <div class="horz-block-item image-module" ui-sref="deal({id: '{{ dealsContent.horizontalModule6.id }}'})" ng-if="dealsContent.horizontalModule6.id && showDealsContent">
+      <div class="horz-block-item image-module" ui-sref="deal({slug: '{{ dealsContent.horizontalModule6.slug }}'})" ng-if="dealsContent.horizontalModule6.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule6.headline }}</p>
               <small>{{ dealsContent.horizontalModule6.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule6.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule6.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule6.slug" ui-sref="deal({id: '{{ dealsContent.horizontalModule6.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -94,13 +94,13 @@
           </div>
         </div>
       </div>
-      <div class="horz-block-item image-module" ui-sref="deal({id: '{{ dealsContent.horizontalModule7.id }}'})" ng-if="dealsContent.horizontalModule7.id && showDealsContent">
+      <div class="horz-block-item image-module" ui-sref="deal({slug: '{{ dealsContent.horizontalModule7.slug }}'})" ng-if="dealsContent.horizontalModule7.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule7.headline }}</p>
               <small>{{ dealsContent.horizontalModule7.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule7.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule7.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule7.slug" ui-sref="deal({id: '{{ dealsContent.horizontalModule7.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -108,13 +108,13 @@
           </div>
         </div>
       </div>
-      <div class="horz-block-item image-module" ui-sref="deal({id: '{{ dealsContent.horizontalModule8.id }}'})" ng-if="dealsContent.horizontalModule8.id && showDealsContent">
+      <div class="horz-block-item image-module" ui-sref="deal({slug: '{{ dealsContent.horizontalModule8.slug }}'})" ng-if="dealsContent.horizontalModule8.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule8.headline }}</p>
               <small>{{ dealsContent.horizontalModule8.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule8.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule8.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule8.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule8.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -122,13 +122,13 @@
           </div>
         </div>
       </div>
-      <div class="horz-block-item image-module" ui-sref="deal({id: '{{ dealsContent.horizontalModule9.id }}'})" ng-if="dealsContent.horizontalModule9.id && showDealsContent">
+      <div class="horz-block-item image-module" ui-sref="deal({slug: '{{ dealsContent.horizontalModule9.slug }}'})" ng-if="dealsContent.horizontalModule9.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule9.headline }}</p>
               <small>{{ dealsContent.horizontalModule9.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule9.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule9.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule9.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule9.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -136,13 +136,13 @@
           </div>
         </div>
       </div>
-      <div class="horz-block-item image-module" ui-sref="deal({id: '{{ dealsContent.horizontalModule10.id }}'})" ng-if="dealsContent.horizontalModule10.id && showDealsContent">
+      <div class="horz-block-item image-module" ui-sref="deal({slug: '{{ dealsContent.horizontalModule10.slug }}'})" ng-if="dealsContent.horizontalModule10.slug && showDealsContent">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="horz-block-item-cont">
               <p>{{ dealsContent.horizontalModule10.headline }}</p>
               <small>{{ dealsContent.horizontalModule10.date }}</small>
-              <md-button ng-if="dealsContent.horizontalModule10.id" ui-sref="deal({id: '{{ dealsContent.horizontalModule10.id }}'})" class="btn btn-border">Open Deal</md-button>
+              <md-button ng-if="dealsContent.horizontalModule10.slug" ui-sref="deal({slug: '{{ dealsContent.horizontalModule10.slug }}'})" class="btn btn-border">Open Deal</md-button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">

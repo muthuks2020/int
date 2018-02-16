@@ -10,10 +10,30 @@ unipaper.controller('dealDetailController', function($scope, contentful, environ
 
   var getDeal = function() {
     contentful
-      .entries("content_type=deals&sys.id=" + $stateParams.id)
+      .entries("content_type=deals&fields.urlSlug=" + $stateParams.slug)
       .then(function(response) {
-        fillDealContent(response.data.items[0]);
+        var dealRaw = response.data.items[0];
+        if(dealRaw !== undefined) {
+          fillDealContent(dealRaw);
+        } else {
+          getDealWithId();
+        }
       });
+  };
+
+
+  var getDealWithId = function() {
+    contentful
+      .entries("content_type=deals&sys.id=" + $stateParams.articleSlug)
+      .then(function(response) {
+        var dealRaw = response.data.items[0];
+        if(dealRaw !== undefined) {
+          fillDealContent(dealRaw);
+        } else {
+          $scope.articleError = 'Nothing found.';
+          return false;
+        }
+      })
   };
 
   var fillDealContent = function(dealRaw) {
@@ -22,7 +42,8 @@ unipaper.controller('dealDetailController', function($scope, contentful, environ
       headline: dealRaw.fields !== undefined ? dealRaw.fields.title : '',
       subHeading: dealRaw.fields !== undefined && dealRaw.fields.subHeading !== undefined ? dealRaw.fields.subHeading : '',
       image: utilityFactory.getImageUrlForAStory(dealRaw),
-      content: utilityFactory.getContentBodyFromMarkdown(dealRaw.fields.contentBody)
+      content: utilityFactory.getContentBodyFromMarkdown(dealRaw.fields.contentBody),
+      slug: dealRaw.fields !== undefined && dealRaw.fields.urlSlug !== undefined && dealRaw.fields.urlSlug !== '' ? dealRaw.fields.urlSlug : dealRaw.sys.id
     };
     fillMetaTags();
     $window.prerenderReady = true;

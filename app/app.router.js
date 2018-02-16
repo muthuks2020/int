@@ -105,9 +105,9 @@ unipaper.config(function($stateProvider, $urlRouterProvider, contentfulProvider,
   
     .state('deal', {
       parent: 'main',
-      url: '/deal/:id',
+      url: '/deal/:slug',
       params: {
-        id: ''
+        slug: ''
       },
       views: {
         '': {
