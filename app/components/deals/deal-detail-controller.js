@@ -58,7 +58,7 @@ unipaper.controller('dealDetailController', function($scope, contentful, environ
   var fillMetaTags = function() {
     $rootScope.metaTags = {
       title: $scope.dealContent.headline + " ",
-      ogUrl: environmentVariables.domainName + '/deal/' + $scope.dealContent.id,
+      ogUrl: environmentVariables.domainName + '/deal/' + $scope.dealContent.slug,
       ogImage: $scope.dealContent.image,
       description: $scope.dealContent.headline + $scope.dealContent.subHeading
     };

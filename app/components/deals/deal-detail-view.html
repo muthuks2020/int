@@ -18,27 +18,27 @@
           {{ dealContent.subHeading }}
         </h2>
         <div class="social-links pull-right">
-                <a href="#" ng-if="dealContent.id"
+                <a href="#" ng-if="dealContent.slug"
                 socialshare
                 socialshare-provider="email"
                 socialshare-trigger="click"
                 socialshare-subject="{{ dealContent.headline }}"
                 socialshare-to=""
-                socialshare-body="{{ domainName }}/deal/{{dealContent.id}}">
+                socialshare-body="{{ domainName }}/deal/{{dealContent.slug}}">
                 <md-icon md-svg-src="assets/img/icons/mail-icn.svg"></md-icon>
                 </a>
-                <a href="#" ng-if="dealContent.headline" ng-if="dealContent.id"
+                <a href="#" ng-if="dealContent.headline" ng-if="dealContent.slug"
                 socialshare
                 socialshare-provider="facebook"
                 socialshare-text="{{ dealContent.headline }}"
-                socialshare-url="{{ domainName }}/deal/{{dealContent.id}}">
+                socialshare-url="{{ domainName }}/deal/{{dealContent.slug}}">
                 <md-icon md-svg-src="assets/img/icons/unipaper-facebook.svg"></md-icon>
                 </a>
-                <a href="#" ng-if="dealContent.headline" ng-if="dealContent.id"
+                <a href="#" ng-if="dealContent.headline" ng-if="dealContent.slug"
                 socialshare
                 socialshare-provider="twitter"
                 socialshare-text="{{ dealContent.headline }}"
-                socialshare-url="{{ domainName }}/deal/{{dealContent.id}}">
+                socialshare-url="{{ domainName }}/deal/{{dealContent.slug}}">
                 <md-icon md-svg-src="assets/img/icons/unipaper-twitter.svg"></md-icon>
                 </a>
             </div>
@@ -338,34 +338,34 @@
   <h2>Share this deal</h2>
   <div class="social-links pull-right">
     <img src="assets/img/icons/top-icn-share.png" alt="" class="top-icn" ng-click="scroll()">
-    <a href="#" ng-if="dealContent.id"
+    <a href="#" ng-if="dealContent.slug"
       socialshare
       socialshare-provider="email"
       socialshare-trigger="click"
       socialshare-subject="{{ dealContent.headline }}"
       socialshare-to=""
-      socialshare-body="{{ domainName }}/deal/{{dealContent.id}}">
+      socialshare-body="{{ domainName }}/deal/{{dealContent.slug}}">
       <md-icon md-svg-src="assets/img/icons/mail-icn.svg"></md-icon>
     </a>
-    <a href="#" ng-if="dealContent.headline" ng-if="dealContent.id"
+    <a href="#" ng-if="dealContent.headline" ng-if="dealContent.slug"
       socialshare
       socialshare-provider="facebook"
       socialshare-text="{{ dealContent.headline }}"
-      socialshare-url="{{ domainName }}/deal/{{dealContent.id}}">
+      socialshare-url="{{ domainName }}/deal/{{dealContent.slug}}">
       <md-icon md-svg-src="assets/img/icons/unipaper-facebook.svg"></md-icon>
     </a>
-    <a href="#" ng-if="dealContent.headline" ng-if="dealContent.id"
+    <a href="#" ng-if="dealContent.headline" ng-if="dealContent.slug"
       socialshare
       socialshare-provider="twitter"
       socialshare-text="{{ dealContent.headline }}"
-      socialshare-url="{{ domainName }}/deal/{{dealContent.id}}">
+      socialshare-url="{{ domainName }}/deal/{{dealContent.slug}}">
       <md-icon md-svg-src="assets/img/icons/unipaper-twitter.svg"></md-icon>
     </a>
     <a href="#"
       socialshare
-      socialshare-provider="whatsapp" ng-if="dealContent.id"
+      socialshare-provider="whatsapp" ng-if="dealContent.slug"
       socialshare-text="{{ dealContent.headline }}"
-      socialshare-url="{{ domainName }}/deal/{{dealContent.id}}"
+      socialshare-url="{{ domainName }}/deal/{{dealContent.slug}}"
       class="visible-xs"
       >
       <md-icon md-svg-src="assets/img/icons/unipaper-whatsApp.svg"></md-icon>
